@@ -21,8 +21,8 @@ type = custom/script
 interval = 60
 ; You can change format-prefix to whatever icon you want it to display. I'm using Nerd Font on the polybar so I just use Nerd Icons as well.
 format-prefix = "直 "
-format-prefix-foreground = <the icon's color>
-exec = python <path to wifi.py>
+format-prefix-foreground = the icon's color
+exec = python path to wifi.py
 ; Display the network manager and wifi connector. In this case I'm using Alacritty.
 click-left = Alacritty -o font.size = 8 -v --hold -e python wificonnector.py
 ```
@@ -32,7 +32,7 @@ click-left = Alacritty -o font.size = 8 -v --hold -e python wificonnector.py
 
 - I'm using i3-gaps, and as you can see in the second images the Alacritty use to open wifi connector window is floating. Just do it by making specified Alacritty class or make all Alacritty window become floating by adding this line into your i3 config:
 
-```conf
+```ini
 for_window [class="^Alacritty$" instance="^Alacritty$"] floating enable
 ```
 
