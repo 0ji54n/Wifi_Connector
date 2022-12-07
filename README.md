@@ -21,8 +21,10 @@ type = custom/script
 interval = 60
 ; You can change format-prefix to whatever icon you want it to display. I'm using Nerd Font on the polybar so I just use Nerd Icons as well.
 format-prefix = "直 "
-format-prefix-foreground = the icon's color
-exec = python path to wifi.py
+; The icon's color
+format-prefix-foreground = ${colors.primary}
+; Replace wifi.py with path to wifi.py
+exec = python wifi.py
 ; Display the network manager and wifi connector. In this case I'm using Alacritty.
 click-left = Alacritty -o font.size = 8 -v --hold -e python wificonnector.py
 ```
