@@ -14,7 +14,7 @@ Python script use in polybar to create a Network Manager
 
 First, open your polybar config file (default directory should be /etc/polybar/config.ini) and add this:
 
-```
+```ini
 [module/wifi]
 type = custom/script
 ; Update the module status every 60 seconds, just remember the smaller value is, the more cpu usage it will takes to update your module.
@@ -32,7 +32,7 @@ click-left = Alacritty -o font.size = 8 -v --hold -e python wificonnector.py
 
 - I'm using i3-gaps, and as you can see in the second images the Alacritty use to open wifi connector window is floating. Just do it by making specified Alacritty class or make all Alacritty window become floating by adding this line into your i3 config:
 
-```
+```conf
 for_window [class="^Alacritty$" instance="^Alacritty$"] floating enable
 ```
 
